@@ -18,6 +18,13 @@ class My_string(str):
         instance.date = datetime.datetime.now()
         return instance
 
+    def __str__(self) -> str:
+        return f'Первая часть строки {self.name}, вторая часть строки ({self.date}).'
+
+    def __repr__(self) -> str:
+        return f'{self.name} {self.date}'
+
+
 first_string = My_string('Im', 'write')
 print(first_string)
 print(first_string.name)
